@@ -39,13 +39,25 @@ export default createGlobalStyle`
     list-style: none;
   }
   body .Toastify .Toastify__toast-container .Toastify__toast--success{
-    background: ${colors.successColor};
-    color:white;
-  }
-  body .Toastify .Toastify__toast-container .Toastify__toast--error{
-    background: ${colors.errorColor};
-    color:white;
-  }
+  background: ${colors.successColor};
+  color: white;
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--success .Toastify__progress-bar{
+  background: rgba(255, 255, 255, 0.7);
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--error{
+  background: ${colors.errorColor};
+  color: white;
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--error .Toastify__progress-bar{
+  background: rgba(255, 255, 255, 0.7);
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--success .Toastify__toast-icon svg{
+  fill: white;
+}
+body .Toastify .Toastify__toast-container .Toastify__toast--error .Toastify__toast-icon svg{
+  fill: white;
+}
 }`;
 export const Container = styled.section`
   max-width: 360px;
