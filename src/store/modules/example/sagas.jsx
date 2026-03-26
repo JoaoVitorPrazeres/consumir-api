@@ -15,7 +15,6 @@ function* exampleRequest() {
     yield call(requisicao);
     yield put(actions.clicaBotaoSucess());
   } catch {
-    toast.error('deu error');
     yield put(actions.clicaBotaoFailure());
   }
 }
