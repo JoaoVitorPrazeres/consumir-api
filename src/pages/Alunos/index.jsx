@@ -39,18 +39,21 @@ export default function Aluno() {
     e.persist();
     try {
       await axios.delete(`/alunos/${id}`);
+
       const novosAlunos = [...alunos];
       novosAlunos.splice(index, 1);
-      e.CurrentTarget.parentElement.remove();
+      setAlunos(novosAlunos);
+
+      toast.success('Aluno excluído com sucesso');
     } catch (err) {
       const status = get(err, 'response.status', 0);
+
       if (status === 401) {
         toast.error('você precisa fazer login');
         return;
-      } else {
-        toast.error('Ocorreu um erro ao excluir aluno');
       }
-      setIsLoading(false);
+
+      toast.error('Ocorreu um erro ao excluir aluno');
     }
   };
 
