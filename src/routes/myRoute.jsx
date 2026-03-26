@@ -20,7 +20,7 @@ export default function MyRoute({ component: Component, isClosed, ...rest }) {
           );
         }
 
-        return <Component {...props} />; // ✅
+        return <Route {...rest} component={Component} />;
       }}
     />
   );
