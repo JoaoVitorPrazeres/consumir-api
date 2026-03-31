@@ -72,6 +72,10 @@ export default function Fotos({ match }) {
     </Container>
   );
 }
-Fotos.PropTypes = {
-  match: PropTypes.shape({}).isRequired,
+Fotos.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
