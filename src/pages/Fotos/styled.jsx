@@ -1,3 +1,30 @@
 import styled from 'styled-components';
+import * as colors from '../../config/colors';
 
-export const Paragrafo = styled.p``;
+export const Title = styled.h1`
+  text-align: center;
+`;
+export const Form = styled.form`
+  label {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    background: #eee;
+    border: 5px dashed ${colors.primaryColor};
+    margin: 30px auto;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  input {
+    display: none;
+  }
+`;
